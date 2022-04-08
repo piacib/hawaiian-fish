@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Container, Header, FishID, Button, ButtonDisplay } from "./styles";
 import dataset from "../../dataset3.json";
-interface Props {
-  datasetLength: number;
-}
 interface CardSideProps {
   cardID: number;
   onClick: () => any;
@@ -35,14 +32,11 @@ function removeItem<T>(arr: Array<T>, value: T) {
 const randomEntry = (array: number[]) =>
   array[Math.floor(Math.random() * array.length)];
 const arrayOfKeysOriginal = Array.from(Array(dataset.length).keys());
-type TestedCard = { cardID: number; memory: number };
-type TestedCardsType = TestedCard[] | [];
 
-const FlashCard: React.FC<Props> = ({ datasetLength }) => {
+const FlashCard: React.FC = () => {
   const [displayFront, setDisplayFront] = useState(true);
   const [arrayOfKeys, setArrayOfKeys] = useState(arrayOfKeysOriginal);
   const [cardID, setCardID] = useState(randomEntry(arrayOfKeys));
-  const [seenCards, setSeenCards] = useState<TestedCardsType>([]);
   const displayNewCard = () => {
     setCardID(randomEntry(arrayOfKeys));
     setDisplayFront(true);
