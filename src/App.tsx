@@ -1,12 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import FlashCard from "./components/FlashCard/index";
 import dataset from "./dataset3.json";
-
+import "./normalize.css";
 function App() {
   return (
-    <div className="App">
+    <div>
       <FlashCard />
     </div>
   );
