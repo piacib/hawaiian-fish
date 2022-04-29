@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const FlashCardContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+`;
 export const Container = styled.div`
   border: 1px solid black;
   width: 300px;
@@ -26,3 +33,8 @@ export const ButtonDisplay = styled.div`
     background-color: red;
   }
 `;
+/* front pane, placed above back */
+export const Front = styled(Container)``;
+
+/* back, initially hidden pane */
+export const Back = styled(Container)``;
