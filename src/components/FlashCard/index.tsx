@@ -4,6 +4,7 @@ import {
   Header,
   FishID,
   Button,
+  FishImage,
   Front,
   Back,
   ButtonDisplay,
@@ -18,7 +19,7 @@ const FlashCardFront: React.FC<CardSideProps> = ({ onClick, cardID }) => {
   return (
     <Front onClick={onClick}>
       <FishID>{cardID}</FishID>
-      {fishImageSrc ? <img alt="fish" src={fishImageSrc} /> : null}
+      {fishImageSrc ? <FishImage alt="fish" src={fishImageSrc} /> : null}
     </Front>
   );
 };
@@ -40,6 +41,7 @@ function removeItem<T>(arr: Array<T>, value: T) {
 }
 const randomEntry = (array: number[]) =>
   array[Math.floor(Math.random() * array.length)];
+
 const arrayOfKeysOriginal = Array.from(Array(dataset.length).keys());
 
 const FlashCard: React.FC = () => {

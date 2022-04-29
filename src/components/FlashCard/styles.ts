@@ -9,12 +9,16 @@ export const FlashCardContainer = styled.div`
 `;
 export const Container = styled.div`
   border: 1px solid black;
-  width: 300px;
-  height: 300px;
+  width: fit-content;
+  height: fit-content;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 1 grey;
+`;
+export const FishImage = styled.img`
+  width: 400px;
 `;
 export const Header = styled.h1``;
 export const FishID = styled.h3``;
